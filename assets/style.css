@@ -1,0 +1,97 @@
+*,html,body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+body::-webkit-scrollbar{
+    width: 0.55rem;
+} 
+body::-webkit-scrollbar-track{
+    background-color: rgb(213, 247, 119);
+}
+body::-webkit-scrollbar-thumb{
+    background-color: black;
+    height: 450px;
+}   
+#slides-container{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#slides{
+    width: 200vw;
+    height: 200vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background-color: ; */
+}
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 50%;
+}
+#slide-1{
+    background: url("https://images.unsplash.com/photo-1558981001-5864b3250a69?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60") no-repeat center center;
+    background-size: cover;
+    opacity:0.5;
+}
+#slide-2{
+    background: url("https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60") no-repeat center bottom;
+    background-size: cover;
+    transform: translate(0, 100%);
+    opacity:1;
+}
+.crd{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.crd-content{
+    position: relative;
+    z-index: 2000;
+    top: -1000px;
+
+}
+#slide-2 img{
+    position: absolute;
+    height: 30%;
+    width: 20%;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%,-15%);
+    transition: .7s;
+    object-fit: cover;
+    object-position: top;
+}
+#slide-2 img:hover{
+    box-shadow: 0px 0px 20px 5px white;
+    width: 21%;
+    height: 52%;
+    cursor: pointer;
+    top: 50px;
+}
+#slide-3{
+    background: url("https://images.unsplash.com/photo-1583334045372-468493344b99?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60") no-repeat center center;
+    background-size: cover;
+    transform: translate(100%,100%);
+    opacity:0.5;
+}
+#slide-4{
+    background: url("https://images.unsplash.com/photo-1540541338287-41700207dee6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=600&q=60") no-repeat center center;
+    background-size: cover;
+    transform: translate(100%, 0);
+    opacity:0.5;
+}
+.helper{
+    height: 650%;
+    background: red;
+    position: absolute;
+}
